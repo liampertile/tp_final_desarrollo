@@ -1,0 +1,27 @@
+<mat-card class="curso-detail-card">
+  <mat-card-header>
+      <mat-card-title class="alumno-form-header">Crear Alumno</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="guardarAlumno()">
+      
+          <!-- Nombre del alumno -->
+          <mat-form-field appearance="fill">
+              <mat-label>Nombre del Alumno</mat-label>
+              <input matInput [(ngModel)]="alumno.nombre" name="nombre" required />
+          </mat-form-field>
+
+          <!-- Fecha de Nacimiento -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Nacimiento</mat-label>
+              <input matInput [(ngModel)]="alumno.fechaNacimiento" name="fechaNacimiento" type="date" required />
+          </mat-form-field>
+
+          <!-- Botón de guardar -->
+          <div>
+              <button mat-raised-button color="accent" type="submit">Guardar Alumno</button>
+          </div>
+  
+      </form>
+  </mat-card-content>
+</mat-card>

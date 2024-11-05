@@ -1,0 +1,33 @@
+.curso-detail-card {
+  position: relative;
+  padding: 16px;
+  margin: 16px;
+  background-color: #e0f7fa; /* Azul claro */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #00796b; /* Verde azulado */
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #004d40; /* Verde azulado más oscuro */
+}
+
+.alumno-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  background-color: #ffffff; /* Blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-header, .mat-card-content {
+  padding: 8px 16px;
+  color: #004d40; /* Texto en verde azulado */
+}

@@ -1,0 +1,44 @@
+.lista-docentes-card {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+    padding: 20px; /* Espacio interno */
+}
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #00796b; /* Verde azulado */
+    color: #ffffff; /* Texto blanco */
+}
+
+.mat-toolbar a.mat-button {
+    color: #ffffff; /* Color blanco para los enlaces */
+}
+
+.mat-toolbar a.mat-button.router-link-active {
+    font-weight: bold; /* Negrita para el enlace activo */
+    text-decoration: underline; /* Subrayado para el enlace activo */
+}
+
+button.mat-raised-button {
+    background-color: #00796b; /* Verde azulado */
+    color: #ffffff; /* Texto blanco */
+}
+
+button.mat-raised-button:hover {
+    background-color: #004d40; /* Verde azulado más oscuro al pasar el mouse */
+}
+
+.mat-table {
+    width: 100%;
+    margin-top: 20px; /* Margen superior para la tabla */
+}
+
+.mat-header-cell, .mat-cell {
+    padding: 12px; /* Padding para celdas de la tabla */
+    text-align: left; /* Alinear texto a la izquierda */
+}

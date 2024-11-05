@@ -1,0 +1,35 @@
+<mat-card class="curso-detail-card crear-docente-card">
+  <mat-card-header>
+      <mat-card-title class="alumno-form-header">Crear Docente</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="guardarDocente()">
+
+          <!-- Nombre del docente -->
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Nombre del Docente</mat-label>
+              <input matInput [(ngModel)]="docente.nombre" name="nombre" required />
+          </mat-form-field>
+
+          <!-- Legajo del docente -->
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Legajo</mat-label>
+              <input matInput type="number" [(ngModel)]="docente.legajo" name="legajo" required />
+          </mat-form-field>
+
+          <!-- Campo adicional (puedes agregar más campos aquí si es necesario) -->
+          <!-- Por ejemplo, un campo para el departamento del docente -->
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Departamento</mat-label>
+              <input matInput [(ngModel)]="docente.departamento" name="departamento" required />
+          </mat-form-field>
+
+          <!-- Botones de acción -->
+          <div>
+              <button mat-raised-button color="primary" type="submit">Guardar Docente</button>
+              <button mat-button (click)="cancelar()">Cancelar</button>
+          </div>
+
+      </form>
+  </mat-card-content>
+</mat-card>

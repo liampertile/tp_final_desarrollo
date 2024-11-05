@@ -1,0 +1,27 @@
+<mat-card class="curso-detail-card crear-docente-card">
+  <mat-card-header>
+      <mat-card-title>Crear Docente</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="guardarDocente()">
+
+          <!-- Nombre del docente -->
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Nombre del Docente</mat-label>
+              <input matInput [(ngModel)]="docente.nombre" name="nombre" required />
+          </mat-form-field>
+
+          <!-- Legajo del docente -->
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Legajo</mat-label>
+              <input matInput type="number" [(ngModel)]="docente.legajo" name="legajo" required />
+          </mat-form-field>
+
+          <!-- Botón de guardar -->
+          <div>
+              <button mat-raised-button color="accent" type="submit">Guardar Docente</button>
+          </div>
+
+      </form>
+  </mat-card-content>
+</mat-card>

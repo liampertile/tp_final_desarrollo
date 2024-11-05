@@ -1,0 +1,64 @@
+<mat-card class="curso-detail-card">
+  <mat-card-header>
+      <mat-card-title class="alumno-form-header">Crear Curso</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="guardarCurso()">
+      
+          <!-- Tema -->
+          <mat-form-field appearance="fill">
+              <mat-label>Tema</mat-label>
+              <mat-select [(ngModel)]="curso.tema.id" name="tema" required>
+                  <mat-option *ngFor="let tema of temas" [value]="tema.id">
+                      {{ tema.nombre }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <!-- Fecha de inicio -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Inicio</mat-label>
+              <input matInput type="date" [(ngModel)]="curso.fechaInicio" name="fechaInicio" required />
+          </mat-form-field>
+
+          <!-- Fecha de fin -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Fin</mat-label>
+              <input matInput type="date" [(ngModel)]="curso.fechaFin" name="fechaFin" required />
+          </mat-form-field>
+
+          <!-- Docente -->
+          <mat-form-field appearance="fill">
+              <mat-label>Docente</mat-label>
+              <mat-select [(ngModel)]="curso.docente.id" name="docente" required>
+                  <mat-option *ngFor="let docente of docentes" [value]="docente.id">
+                      {{ docente.nombre }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <!-- Precio -->
+          <mat-form-field appearance="fill">
+              <mat-label>Precio</mat-label>
+              <input matInput type="number" [(ngModel)]="curso.precio" name="precio" required />
+          </mat-form-field>
+
+          <!-- Alumnos -->
+          <mat-form-field appearance="fill">
+              <mat-label>Alumnos</mat-label>
+              <mat-select [(ngModel)]="curso.alumnos" name="alumnos" multiple required>
+                  <mat-option *ngFor="let alumno of alumnos" [value]="alumno">
+                      {{ alumno.nombre }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <!-- Botones de acción -->
+          <div>
+              <button mat-raised-button color="accent" type="submit">Guardar Curso</button>
+              <button mat-button (click)="cancelar()">Cancelar</button>
+          </div>
+
+      </form>
+  </mat-card-content>
+</mat-card>

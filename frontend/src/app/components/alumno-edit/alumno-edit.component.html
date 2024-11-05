@@ -1,0 +1,25 @@
+<mat-card *ngIf="alumno" class="curso-detail-card">
+  <mat-card-header>
+      <mat-card-title class="alumno-form-header">Editar Alumno: {{ alumno.nombre }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="actualizarAlumno()">
+      
+          <!-- Campo para Nombre del Alumno -->
+          <mat-form-field appearance="fill">
+              <mat-label>Nombre del Alumno</mat-label>
+              <input matInput [(ngModel)]="alumno.nombre" name="nombre" required />
+          </mat-form-field>
+
+          <!-- Campo para Fecha de Nacimiento -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Nacimiento</mat-label>
+              <input matInput [(ngModel)]="alumno.fechaNacimiento" name="fechaNacimiento" type="date" required />
+          </mat-form-field>
+
+          <!-- Botones de Guardar y Cancelar -->
+          <button mat-raised-button color="accent" type="submit">Actualizar Alumno</button>
+          <button mat-button (click)="router.navigate(['/alumnos'])">Cancelar</button>
+      </form>
+  </mat-card-content>
+</mat-card>

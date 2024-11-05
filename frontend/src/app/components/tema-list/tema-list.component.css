@@ -1,0 +1,31 @@
+.tema-list-card {
+    width: 70%; /* Ancho del card, igual que en otros cards */
+    margin: 50px auto; /* Espaciado superior e inferior, centrado horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para efecto de profundidad */
+}
+
+.descripcion-header {
+    width: 40%; /* Ancho fijo para la columna de descripción */
+}
+
+.descripcion-cell {
+    max-width: 200px; /* Limita el ancho del contenido */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+    white-space: nowrap; /* Evita que el texto se ajuste a varias líneas */
+}
+
+.mat-toolbar {
+    background-color: #00796b; /* Verde azulado para la barra de herramientas */
+    color: #ffffff; /* Color del texto */
+    display: flex; /* Flexbox para alineación de elementos */
+    justify-content: flex-end; /* Alinea todos los elementos a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.spacer {
+    flex: 1 1 auto; /* Espacio flexible que empuja los enlaces a la derecha */
+}

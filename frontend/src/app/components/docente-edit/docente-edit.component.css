@@ -1,0 +1,16 @@
+.docente-card {
+    background-color: #e0f7fa; /* Azul claro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+    padding: 20px; /* Espacio interno */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.docente-card mat-card-header {
+    background-color: #00796b; /* Verde azulado para el encabezado */
+    color: #ffffff; /* Color del texto en el encabezado */
+}
+
+.close-button {
+    color: #ffffff; /* Color del ícono de cerrar */
+}

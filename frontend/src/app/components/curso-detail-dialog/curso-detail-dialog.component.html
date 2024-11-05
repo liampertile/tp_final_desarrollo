@@ -1,0 +1,22 @@
+<mat-card *ngIf="curso" class="curso-detail-card">
+  <mat-card-header>
+      <mat-card-title>{{ curso.tema.nombre }}</mat-card-title>
+      <button mat-icon-button class="close-button" (click)="cerrar()" aria-label="Cerrar">
+          <mat-icon>close</mat-icon> 
+      </button>
+  </mat-card-header>
+  <mat-card-content>
+      <p><strong>Fecha de Inicio:</strong> {{ curso.fechaInicio | date }}</p>
+      <p><strong>Fecha de Fin:</strong> {{ curso.fechaFin | date }}</p>
+      <p><strong>Docente:</strong> {{ curso.docente.nombre }}</p>
+      <p><strong>Precio:</strong> {{ curso.precio | currency }}</p>
+      
+      <p *ngIf="curso.alumnos?.length">
+          <strong>Alumnos:</strong>
+          <ul class="alumno-list">
+              <li *ngFor="let alumno of curso.alumnos">{{ alumno.nombre }}</li>
+          </ul>
+    
+      <p *ngIf="!curso.alumnos?.length"><strong>No hay alumnos inscritos.</strong></p>
+  </mat-card-content>
+</mat-card>

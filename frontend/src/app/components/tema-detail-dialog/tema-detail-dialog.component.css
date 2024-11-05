@@ -1,0 +1,34 @@
+.mat-toolbar {
+  background-color: #00796b; /* Verde azulado */
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end; /* Alinea todos los elementos a la derecha */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.mat-toolbar span {
+  margin-right: 16px; /* Añade margen a la derecha del título */
+}
+
+.curso-detail-card {
+  position: relative; /* Permite posicionar elementos hijos */
+  width: 70%; /* Ancho del card, similar a otros cards */
+  margin: 20px auto; /* Centra el card verticalmente */
+  padding: 20px; /* Espaciado interno */
+  background-color: #e0f7fa; /* Fondo azul claro, coherente con otros cards */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para efecto de profundidad */
+}
+
+.close-button {
+  position: absolute; /* Permite posicionar el botón en relación al mat-card */
+  top: 8px; /* Ajusta la distancia desde la parte superior */
+  right: 8px; /* Ajusta la distancia desde la derecha */
+  color: #ff0000; /* Color del botón de cerrar */
+}
+
+.titulo-card {
+  font-weight: bold; /* Negrita para el título */
+  font-size: 1.5rem; /* Tamaño de fuente mayor para el título */
+  color: #00796b; /* Color del título que coincide con la barra de herramientas */
+}

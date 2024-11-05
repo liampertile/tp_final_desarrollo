@@ -1,0 +1,11 @@
+<mat-card *ngIf="tema" class="tema-detail-card">
+  <mat-card-header>
+      <mat-card-title>{{ tema.nombre }}</mat-card-title>
+      <button mat-icon-button class="close-button" (click)="cerrar()" aria-label="Cerrar">
+          <mat-icon>close</mat-icon>
+      </button>
+  </mat-card-header>
+  <mat-card-content>
+      <p><strong>Descripción:</strong> {{ tema.descripcion }}</p>
+  </mat-card-content>
+</mat-card>

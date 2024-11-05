@@ -1,0 +1,36 @@
+.curso-detail-card {
+    position: relative;
+    padding: 20px;
+    margin: 16px;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.alumno-form-header {
+    color: #004d40; /* Color de texto verde azulado oscuro */
+    font-weight: bold;
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button.mat-raised-button {
+    background-color: #00796b; /* Verde azulado */
+    color: #fff;
+    margin-right: 8px;
+}
+
+button.mat-raised-button:hover {
+    background-color: #004d40; /* Verde azulado más oscuro */
+}
+
+button.mat-button {
+    color: #757575; /* Gris medio */
+}
+
+button.mat-button:hover {
+    color: #424242; /* Gris oscuro */
+}

@@ -1,0 +1,17 @@
+.tema-detail-card {
+    width: 70%; /* Ancho del card, igual que en los otros cards */
+    margin: 50px auto; /* Espaciado superior e inferior, centrado horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para efecto de profundidad */
+}
+
+.form-field {
+    width: 100%; /* Asegura que el campo ocupe el ancho completo */
+    margin-bottom: 16px; /* Espacio entre campos */
+}
+
+.button-container {
+    margin-top: 20px; /* Espacio superior para el botón */
+}

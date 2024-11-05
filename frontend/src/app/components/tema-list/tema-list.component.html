@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+  <span>tp_final_desarrollo_pertile</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/cursos" routerLinkActive="active-link">Cursos</a>
+  <a mat-button routerLink="/alumnos" routerLinkActive="active-link">Alumnos</a>
+  <a mat-button routerLink="/docentes" routerLinkActive="active-link">Docentes</a>
+  <a mat-button routerLink="/temas" routerLinkActive="active-link">Temas</a>
+</mat-toolbar>
+
+<mat-card class="tema-list-card">
+  <mat-card-header>
+    <mat-card-title><h2>Lista de Temas</h2></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button (click)="nuevoTema()" mat-raised-button color="accent">Nuevo Tema</button>
+    <table mat-table [dataSource]="listaTemas" class="mat-elevation-z2 tema-table" style="margin-top: 20px">
+      
+      <!-- Columna Nombre -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let tema"> {{ tema.nombre }} </td>
+      </ng-container>
+
+      <!-- Columna Descripción con ancho fijo -->
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef class="descripcion-header"> Descripción </th>
+        <td mat-cell *matCellDef="let tema" class="descripcion-cell"> 
+          {{ tema.descripcion }}
+        </td>
+      </ng-container>
+
+      <!-- Columna Acciones -->
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let tema">
+          <button (click)="editarTema(tema.id)" mat-icon-button color="primary">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="eliminarTema(tema.id)" mat-icon-button color="warn">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button (click)="verTema(tema)" mat-icon-button color="accent">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+<mat-card class="tema-detail-card crear-tema-card">
+  <mat-card-header>
+      <mat-card-title>Crear Tema</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="guardarTema()">
+          
+          <!-- Nombre del tema -->
+          <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Nombre del Tema</mat-label>
+              <input matInput [(ngModel)]="tema.nombre" name="nombre" required />
+          </mat-form-field>
+
+          <!-- Descripción del tema -->
+          <mat-form-field appearance="fill" class="form-field">
+              <mat-label>Descripción</mat-label>
+              <textarea matInput [(ngModel)]="tema.descripcion" name="descripcion" required></textarea>
+          </mat-form-field>
+
+          <!-- Botón de guardar -->
+          <div class="button-container">
+              <button mat-raised-button color="accent" type="submit">Guardar Tema</button>
+          </div>
+
+      </form>
+  </mat-card-content>
+</mat-card>

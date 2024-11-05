@@ -1,0 +1,83 @@
+.mat-toolbar {
+    background-color: #00796b; /* Verde azulado */
+    color: #ffffff;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar a.mat-button {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+.mat-toolbar a.mat-button.router-link-active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.curso-detail-card {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button.mat-raised-button {
+    background-color: #00796b; /* Verde azulado */
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+button.mat-raised-button:hover {
+    background-color: #004d40; /* Verde azulado más oscuro */
+}
+
+button.mat-button {
+    color: #757575; /* Gris medio */
+}
+
+button.mat-button:hover {
+    color: #424242; /* Gris oscuro */
+}
+
+.mat-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mat-header-cell, .mat-cell {
+    padding: 12px;
+    text-align: left;
+}
+
+.mat-selection-list {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espaciado entre el campo de fecha y el botón */
+    margin-top: 20px;
+}
+
+.mat-form-field {
+    flex: 1; /* Permite que el campo de entrada ocupe el espacio disponible */
+}
+
+button.mat-raised-button {
+    white-space: nowrap; /* Evita que el texto del botón se ajuste en varias líneas */
+}

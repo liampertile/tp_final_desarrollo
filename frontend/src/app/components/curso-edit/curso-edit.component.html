@@ -1,0 +1,67 @@
+<mat-card *ngIf="curso" class="curso-detail-card">
+  <mat-card-header>
+      <mat-card-title class="alumno-form-header">Editar Curso: {{ curso.tema.nombre }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form (ngSubmit)="actualizarCurso()">
+      
+          <!-- Campo Tema -->
+          <mat-form-field appearance="fill">
+              <mat-label>Tema</mat-label>
+              <mat-select [(ngModel)]="curso.tema.id" name="tema" required>
+                  <mat-option *ngFor="let tema of temas" [value]="tema.id">
+                      {{ tema.nombre }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <!-- Campo Fecha de Inicio -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Inicio</mat-label>
+              <input matInput type="date" [(ngModel)]="curso.fechaInicio" name="fechaInicio" required>
+          </mat-form-field>
+
+          <!-- Campo Fecha de Fin -->
+          <mat-form-field appearance="fill">
+              <mat-label>Fecha de Fin</mat-label>
+              <input matInput type="date" [(ngModel)]="curso.fechaFin" name="fechaFin" required>
+          </mat-form-field>
+
+          <!-- Campo Docente -->
+          <mat-form-field appearance="fill">
+              <mat-label>Docente</mat-label>
+              <mat-select [(ngModel)]="curso.docente.id" name="docente" required>
+                  <mat-option *ngFor="let docente of docentes" [value]="docente.id">
+                      {{ docente.nombre }}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+      
+          <!-- Campo Precio -->
+          <mat-form-field appearance="fill">
+              <mat-label>Precio</mat-label>
+              <input matInput type="number" [(ngModel)]="curso.precio" name="precio" required>
+          </mat-form-field>
+      
+          <!-- Selección de alumnos para agregar -->
+          <h3 class="selection-header">Seleccionar Alumnos para Agregar al Curso</h3>
+          <mat-selection-list [(ngModel)]="alumnosSeleccionados" name="alumnosSeleccionados" multiple>
+              <mat-list-option *ngFor="let alumno of alumnosNoInscritos" [value]="alumno">
+                  {{ alumno.nombre }}
+              </mat-list-option>
+          </mat-selection-list>
+
+          <!-- Selección de alumnos para eliminar -->
+          <h3 class="selection-header">Seleccionar Alumnos para Eliminar del Curso</h3>
+          <mat-selection-list [(ngModel)]="alumnosParaEliminar" name="alumnosParaEliminar" multiple>
+              <mat-list-option *ngFor="let alumno of curso.alumnos" [value]="alumno">
+                  {{ alumno.nombre }}
+              </mat-list-option>
+          </mat-selection-list>
+
+          <!-- Botones de acción -->
+          <button mat-raised-button color="accent" type="submit">Actualizar Curso</button>
+          <button mat-button (click)="router.navigate(['/cursos'])">Cancelar</button>
+      </form>
+  </mat-card-content>
+</mat-card>
